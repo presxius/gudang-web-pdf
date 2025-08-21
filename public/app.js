@@ -134,7 +134,7 @@
   // UI rendering
   function renderLogin(){
     ROOT.innerHTML = '';
-    const div = el(`<div class="container"><div class="card"><form id="loginForm" style="display:flex;gap:8px;align-items:center"><input id="u" placeholder="username"/><input id="p" type="password" placeholder="password"/><button type="submit">Login</button></form></div></div>`);
+    const div = el(`<div class="container"><div class="card"><h2>Gudang Web</h2><form id="loginForm" style="display:flex;gap:8px;align-items:center"><input id="u" placeholder="username"/><input id="p" type="password" placeholder="password"/><button type="submit">Login</button></form></div></div>`);
     ROOT.appendChild(div);
     q('#loginForm').addEventListener('submit', async (ev)=>{ ev.preventDefault(); try{ await tryLogin(q('#u').value.trim(), q('#p').value.trim()); await tryFetchData(); renderApp(); }catch(err){ alert('Login gagal'); } });
   }
