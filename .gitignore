@@ -1,0 +1,27 @@
+# File ini berisi daftar file/folder yang diabaikan oleh Git
+
+# 1. Dependensi & Modul
+# Folder ini berisi semua library yang diunduh oleh npm.
+# Ukurannya sangat besar dan bisa dibuat ulang dengan perintah `npm install`
+# berdasarkan file package.json.
+node_modules/
+
+# 2. Database
+# File database tidak boleh dimasukkan ke source control.
+# File ini berisi data, bukan kode, dan akan dibuat secara otomatis
+# oleh aplikasi saat pertama kali berjalan.
+gudang.db
+
+# 3. File Log
+# File log biasanya dibuat oleh aplikasi saat berjalan dan tidak relevan
+# untuk disimpan di repositori.
+*.log
+
+# 4. File Environment
+# File ini biasanya berisi informasi sensitif seperti password,
+# API key, atau konfigurasi khusus mesin lokal. SANGAT PENTING untuk diabaikan.
+.env
+
+# 5. File sistem operasi
+.DS_Store
+Thumbs.db
